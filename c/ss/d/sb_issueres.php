@@ -1,0 +1,2 @@
+<?php include '../../../config/conn.php'; include '../../../config/function.php'; include 'session.php'; ?>
+<a href="issueresolution_center" class="faa-parent animated-hover" id="sbid-ircntf"><i class="fas fa-newspaper"></i>My Issue Resolution Center <?php $issue=count_issue($user_code, $user_id, $user_type); if($issue>0){ ?><span class="position-absolute badge rounded-pill bg-danger"><?php echo $issue; ?><span class="visually-hidden">unread messages</span></span><?php } ?></a>

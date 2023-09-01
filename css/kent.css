@@ -1,0 +1,44 @@
+/*Kent custom css*/
+.mybg{
+    background-color: #fff;
+}
+
+.mybg:hover{
+    background-color: #ddd;
+}
+
+.mybg_blue{
+	background-color: #c9e9f5;
+}
+
+.mybg_blue:hover{
+	background-color: #b2ccd6;
+}
+
+.mybg_green{
+	background-color: #c3e6cb;
+}
+
+.mybg_green:hover{
+	background-color: #97af9d;
+}
+
+.mybg_red{
+	background-color: #f5c6cb;
+}
+
+.mybg_red:hover{
+	background-color: #c19fa3;
+}
+
+.mybg_yellow{
+	background-color: #faeecd;
+}
+
+.mybg_yellow:hover{
+	background-color: #e0d5b6;
+}
+
+/*input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}*/

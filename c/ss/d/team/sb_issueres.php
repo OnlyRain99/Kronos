@@ -1,0 +1,3 @@
+<?php include '../../../config/conn.php'; include '../../../config/function.php'; include '../session.php';
+$leavecount = get_leave_pending_requests($user_id)+get_myteampendingloa($user_id,$myaccount); ?>
+<a href="issueresolution_center" class="faa-parent animated-hover" id="sbid-ircntf"><i class="fas fa-newspaper faa-flash"></i>My Issue Resolution Center <?php $issue=count_issue($user_code, $user_id, $user_type)+$leavecount; if($issue>0){ ?><span class="position-absolute badge rounded-pill bg-danger"><?php echo $issue; ?><span class="visually-hidden">unread messages</span></span><?php } ?></a>

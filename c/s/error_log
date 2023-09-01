@@ -1,0 +1,43 @@
+[28-Mar-2022 04:42:44 Asia/Manila] PHP Warning:  session_start(): Cannot start session when headers already sent in /home4/aimeenadela/kronos.thesiblingssolutions.com/c/s/session.php on line 3
+[28-Mar-2022 04:42:44 Asia/Manila] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/aimeenadela/kronos.thesiblingssolutions.com/config/conn.php:11) in /home4/aimeenadela/kronos.thesiblingssolutions.com/c/s/session.php on line 7
+[28-Mar-2022 04:42:44 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home4/aimeenadela/kronos.thesiblingssolutions.com/c/s/session.php:16
+Stack trace:
+#0 /home4/aimeenadela/kronos.thesiblingssolutions.com/c/s/index.php(4): include()
+#1 {main}
+  thrown in /home4/aimeenadela/kronos.thesiblingssolutions.com/c/s/session.php on line 16
+[05-Apr-2022 08:13:43 Asia/Manila] PHP Notice:  Undefined index: fus_user_id in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 12
+[05-Apr-2022 08:13:43 Asia/Manila] PHP Notice:  Undefined index: fus_user_type in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 13
+[05-Apr-2022 08:13:43 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 19
+[05-Apr-2022 08:13:43 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 20
+[05-Apr-2022 08:13:43 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 21
+[05-Apr-2022 08:13:43 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 22
+[05-Apr-2022 08:13:43 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 23
+[05-Apr-2022 08:13:43 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 24
+[05-Apr-2022 08:13:43 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/config/function.php on line 1211
+[07-Apr-2022 12:14:38 Asia/Manila] PHP Notice:  Undefined index: fus_user_id in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 12
+[07-Apr-2022 12:14:38 Asia/Manila] PHP Notice:  Undefined index: fus_user_type in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 13
+[07-Apr-2022 12:14:38 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 19
+[07-Apr-2022 12:14:38 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 20
+[07-Apr-2022 12:14:38 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 21
+[07-Apr-2022 12:14:38 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 22
+[07-Apr-2022 12:14:38 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 23
+[07-Apr-2022 12:14:38 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 24
+[07-Apr-2022 12:14:38 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/config/function.php on line 1210
+[19-Apr-2022 12:19:19 Asia/Manila] PHP Notice:  Undefined index: fus_user_id in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 12
+[19-Apr-2022 12:19:19 Asia/Manila] PHP Notice:  Undefined index: fus_user_type in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 13
+[19-Apr-2022 12:19:19 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 19
+[19-Apr-2022 12:19:19 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 20
+[19-Apr-2022 12:19:19 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 21
+[19-Apr-2022 12:19:19 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 22
+[19-Apr-2022 12:19:19 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 23
+[19-Apr-2022 12:19:19 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 24
+[19-Apr-2022 12:19:19 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/config/function.php on line 1276
+[28-Apr-2022 04:49:28 Asia/Manila] PHP Notice:  Undefined index: fus_user_id in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 12
+[28-Apr-2022 04:49:28 Asia/Manila] PHP Notice:  Undefined index: fus_user_type in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 13
+[28-Apr-2022 04:49:28 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 19
+[28-Apr-2022 04:49:28 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 20
+[28-Apr-2022 04:49:28 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 21
+[28-Apr-2022 04:49:28 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 22
+[28-Apr-2022 04:49:28 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 23
+[28-Apr-2022 04:49:28 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/c/s/session.php on line 24
+[28-Apr-2022 04:49:28 Asia/Manila] PHP Notice:  Trying to access array offset on value of type null in /home/u292602927/domains/sibs-flow.info/public_html/kronos/config/function.php on line 1278
