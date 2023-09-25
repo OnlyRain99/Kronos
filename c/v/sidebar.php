@@ -23,15 +23,15 @@
                     </li>
                     <li>
                         <a href="./" class="faa-parent animated-hover">
-                            <i class="fa fa-clock faa-spin faa-fast"></i>Kronos</a>
+                            <i class="fa fa-clock faa-spin faa-fast"></i>My Kronos</a>
                     </li>
                     <li>
                         <a href="mydailylogs" class="faa-parent animated-hover">
-                            <i class="fas fa-folder faa-shake faa-slow"></i>Daily Logs</a>
+                            <i class="fas fa-folder faa-shake faa-slow"></i>My Daily Logs</a>
                     </li>
                     <li>
                         <a href="schedule" class="faa-parent animated-hover">
-                            <i class="fas fa-calendar faa-burst faa-fast"></i>Schedule</a>
+                            <i class="fas fa-calendar faa-burst faa-fast"></i>My Schedule</a>
                     </li>
                     <li><?php $leavecount = get_lv5plusleave($user_id, $myaccount, $_SESSION['fus_user_type'])+get_leave_pending_requests($user_id); ?>
                         <a href="leavecalendar" class="faa-parent animated-hover" id="sbid-mlcntf"><i class="fa-solid fa-calendar-day faa-pulse"></i> My Leave Calendar <?php if($leavecount>0){ ?><span class="badge badge-danger" title="<?php echo $leavecount." LOA pending request"; ?>"><?php echo $leavecount; ?></span><?php } ?></a>
