@@ -23,11 +23,11 @@
                     </li>
                     <li>
                         <a href="./" class="faa-parent animated-hover">
-                            <i class="fa fa-clock faa-spin faa-fast"></i>My Kronos</a>
+                            <i class="fa fa-clock faa-spin faa-fast"></i>Kronos</a>
                     </li>
                     <li>
                         <a href="mydailylogs" class="faa-parent animated-hover">
-                            <i class="fas fa-folder faa-shake faa-slow"></i>My Daily Logs</a>
+                            <i class="fas fa-folder faa-shake faa-slow"></i>Daily Logs</a>
                     </li>
                     <li>
                         <a href="schedule" class="faa-parent animated-hover">
