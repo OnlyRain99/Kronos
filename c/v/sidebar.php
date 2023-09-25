@@ -23,7 +23,7 @@
                     </li>
                     <li>
                         <a href="./" class="faa-parent animated-hover">
-                            <i class="fa fa-clock faa-spin faa-fast"></i>My Kronos</a>
+                            <i class="fa fa-clock faa-spin faa-fast"></i>Kronos</a>
                     </li>
                     <li>
                         <a href="mydailylogs" class="faa-parent animated-hover">
