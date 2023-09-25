@@ -31,7 +31,7 @@
                     </li>
                     <li>
                         <a href="schedule" class="faa-parent animated-hover">
-                            <i class="fas fa-calendar faa-burst faa-fast"></i>My Schedule</a>
+                            <i class="fas fa-calendar faa-burst faa-fast"></i>Schedule</a>
                     </li>
                     <li><?php $leavecount = get_lv5plusleave($user_id, $myaccount, $_SESSION['fus_user_type'])+get_leave_pending_requests($user_id); ?>
                         <a href="leavecalendar" class="faa-parent animated-hover" id="sbid-mlcntf"><i class="fa-solid fa-calendar-day faa-pulse"></i> My Leave Calendar <?php if($leavecount>0){ ?><span class="badge badge-danger" title="<?php echo $leavecount." LOA pending request"; ?>"><?php echo $leavecount; ?></span><?php } ?></a>
