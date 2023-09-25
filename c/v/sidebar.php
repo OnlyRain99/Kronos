@@ -68,6 +68,9 @@
 					<li>
                         <a href="formdownload"><i class="fas fa-folder-open"></i>Download Form</a>
                     </li>
+                    <li>
+                        <a href="QAM"  class="faa-parent animated-hover"><i class="fas fa-check faa-burst faa-fast"></i>Quality Assurance Management</a>
+                    </li>
                 </ul>
             </nav>
         </div>
