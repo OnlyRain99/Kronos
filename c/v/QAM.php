@@ -30,7 +30,7 @@
                 	<content class="main box-border my-10">
       <div class="card my-2 bg-white shadow-lg rounded">
         <div class="card-header p-5 border-b">
-          <h2 class="text-xl text-gray-700 font-medium tracking-wide">QA Weekly Trend</h2>
+          <h2 class="text-xl text-gray-700 font-medium tracking-wide">dasdasd sator</h2>
         </div>
         <div class="card-content p-5">
           <div class="grid grid-cols-3 gap-4 text-center">
@@ -288,7 +288,8 @@ window.chartColors = {
       </div>
        <div class="card mt-5 bg-white shadow-lg">
         <div class="card-header p-5 border-b">
-          <h2 class="text-xl text-gray-700 font-medium tracking-wide">QA Monthly Trend</h2>
+          
+          <h2 class="text-xl text-gray-700 font-medium tracking-wide">QA Monthly Trend</h2> 
         </div>
         <div class="card-content p-5">
           <div class="grid grid-cols-3 gap-4 text-center">
@@ -306,6 +307,9 @@ window.chartColors = {
         <div class="card-header p-5 border-b">
           <h2 class="text-xl text-gray-700 font-medium tracking-wide">Department</h2>
         </div>
+        <div class="container">
+  
+</div>
         <div class="card-content p-5">
           <div class="grid grid-cols-3 gap-4 text-center">
           		
