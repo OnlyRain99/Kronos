@@ -8,6 +8,13 @@
 ?>
 
 
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'head.php'; ?>
@@ -29,254 +36,81 @@
                 </div>
                 	<content class="main box-border my-10">
       <div class="card my-2 bg-white shadow-lg rounded">
-        <div class="card-header p-5 border-b">
-          <h2 class="text-xl text-gray-700 font-medium tracking-wide">Weekly</h2>
+        <div class="card-header p-5 border-b" >
+         <center> <h2 class="text-xl text-gray-700 font-medium tracking-wide" >Weekly</h2></center>
                  </div>
               <div class="card-content p-5">
               <div class="grid grid-cols-3 gap-4 text-center">
-            	  <h2 class="text-xl text-gray-700 font-medium tracking-wide">QA Week Trend</h2>
-          	  	  <div style="width: 70%; height: 100%;">
-        <canvas id="canvas"></canvas>
-    </div>
-    <button id="randomizeData">Randomize Data</button>
+              <!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
 
+var chart = new CanvasJS.Chart("chartContainer", {
+	title:{
+		text: "QA Week Trend"
+	},
+	axisY: {
+		title: "Number of Locations",
+		lineColor: "#4F81BC",
+		tickColor: "#4F81BC",
+		labelFontColor: "#4F81BC"
+	},
+	axisY2: {
+		title: "Percent",
+		suffix: "%",
+		lineColor: "#C0504E",
+		tickColor: "#C0504E",
+		labelFontColor: "#C0504E"
+	},
+  
+	data: [{
+		type: "column",
+    name: "Audit Count",
+    showInLegend: true,
+		dataPoints: [
+			{ label: "Week 33", y: 44853 },
+			{ label: "Week 34", y: 36525 },
+			{ label: "Week 35", y: 23768 },
+			{ label: "Week 36", y: 19420 },
+			{ label: "Week 37", y: 13528 },
+			{ label: "Week 38", y: 11906 },
+      { label: "Week 39", y: 54330 }
+		]
+	}]
+  
+});
+chart.render();
+createPareto();	
 
-    		  <style type="text/css">
-    			  canvas {
-          -moz-user-select: none;
-        -webkit-user-select: none;
-                  -ms-user-select: none;
-    }
-    		</style>
+function createPareto(){
+	var dps = [];
+	var yValue, yTotal = 0, yPercent = 0;
 
-    			<script type="text/javascript">
-    				'use strict';
+	for(var i = 0; i < chart.data[0].dataPoints.length; i++)
+		yTotal += chart.data[0].dataPoints[i].y;
 
-        window.chartColors = {
-	red: 'rgb(255, 99, 132)',
-	orange: 'rgb(255, 159, 64)',
-	yellow: 'rgb(255, 205, 86)',
-	green: 'rgb(75, 192, 192)',
-	blue: 'rgb(54, 162, 235)',
-	purple: 'rgb(153, 102, 255)',
-	grey: 'rgb(201, 203, 207)'
-};
-
-(function(global) {
-	var Months = [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December'
-	];
-
-	var COLORS = [
-		'#4dc9f6',
-		'#f67019',
-		'#f53794',
-		'#537bc4',
-		'#acc236',
-		'#166a8f',
-		'#00a950',
-		'#58595b',
-		'#8549ba'
-	];
-
-	var Samples = global.Samples || (global.Samples = {});
-	var Color = global.Color;
-
-	Samples.utils = {
-		// Adapted from http://indiegamr.com/generate-repeatable-random-numbers-in-js/
-		srand: function(seed) {
-			this._seed = seed;
-		},
-
-		rand: function(min, max) {
-			var seed = this._seed;
-			min = min === undefined ? 0 : min;
-			max = max === undefined ? 1 : max;
-			this._seed = (seed * 9301 + 49297) % 233280;
-			return min + (this._seed / 233280) * (max - min);
-		},
-
-		numbers: function(config) {
-			var cfg = config || {};
-			var min = cfg.min || 0;
-			var max = cfg.max || 1;
-			var from = cfg.from || [];
-			var count = cfg.count || 8;
-			var decimals = cfg.decimals || 8;
-			var continuity = cfg.continuity || 1;
-			var dfactor = Math.pow(10, decimals) || 0;
-			var data = [];
-			var i, value;
-
-			for (i = 0; i < count; ++i) {
-				value = (from[i] || 0) + this.rand(min, max);
-				if (this.rand() <= continuity) {
-					data.push(Math.round(dfactor * value) / dfactor);
-				} else {
-					data.push(null);
-				}
-			}
-
-			return data;
-		},
-
-		labels: function(config) {
-			var cfg = config || {};
-			var min = cfg.min || 0;
-			var max = cfg.max || 100;
-			var count = cfg.count || 8;
-			var step = (max - min) / count;
-			var decimals = cfg.decimals || 8;
-			var dfactor = Math.pow(10, decimals) || 0;
-			var prefix = cfg.prefix || '';
-			var values = [];
-			var i;
-
-			for (i = min; i < max; i += step) {
-				values.push(prefix + Math.round(dfactor * i) / dfactor);
-			}
-
-			return values;
-		},
-
-		months: function(config) {
-			var cfg = config || {};
-			var count = cfg.count || 12;
-			var section = cfg.section;
-			var values = [];
-			var i, value;
-
-			for (i = 0; i < count; ++i) {
-				value = Months[Math.ceil(i) % 12];
-				values.push(value.substring(0, section));
-			}
-
-			return values;
-		},
-
-		color: function(index) {
-			return COLORS[index % COLORS.length];
-		},
-
-		transparentize: function(color, opacity) {
-			var alpha = opacity === undefined ? 0.5 : 1 - opacity;
-			return Color(color).alpha(alpha).rgbString();
-		}
-	};
-
-	// DEPRECATED
-	window.randomScalingFactor = function() {
-		return Math.round(Samples.utils.rand(-100, 100));
-	};
-
-	// INITIALIZATION
-
-	Samples.utils.srand(Date.now());
-
-	// Google Analytics
-	/* eslint-disable */
-	if (document.location.hostname.match(/^(www\.)?chartjs\.org$/)) {
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-28909194-3', 'auto');
-		ga('send', 'pageview');
+	for(var i = 0; i < chart.data[0].dataPoints.length; i++){
+		yValue = chart.data[0].dataPoints[i].y;
+		yPercent += (yValue / yTotal * 100);
+		dps.push({label: chart.data[0].dataPoints[i].label, y: yPercent});
 	}
-	/* eslint-enable */
+	
+	chart.addTo("data",{type:"line", yValueFormatString: "0.##\"%\"", dataPoints: dps});
+	chart.data[1].set("axisYType", "secondary", false);
+	chart.axisY[0].set("maximum", yTotal);
+	chart.axisY2[0].set("maximum", 100);
+}
 
-}(this));        
-        var chartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [{
-                type: 'line',
-                label: 'Dataset 1',
-                backgroundColor: window.chartColors.yellow,
-                borderColor: window.chartColors.yellow,
-                borderWidth: 2,
-                fill: false,
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ]
-            }, 
-              {
-                type: 'bar',
-                label: 'Dataset 2',
-                backgroundColor: window.chartColors.blue,
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ],
-                borderColor: 'white',
-                borderWidth: 2
-            }, {
-                type: 'bar',
-                label: 'Dataset 3',
-                backgroundColor: window.chartColors.green,
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ]
-            }]
-
-        };
-        window.onload = function() {
-            var ctx = document.getElementById("canvas").getContext("2d");
-            window.myMixedChart = new Chart(ctx, {
-                type: 'bar',
-                data: chartData,
-                options: {
-                    responsive: true,
-                    title: {
-                        display: true,
-                        text: 'QA Week Trend'
-                    },
-                    tooltips: {
-                        mode: 'index',
-                        intersect: true
-                    }
-                }
-            });
-        };
-
-        document.getElementById('randomizeData').addEventListener('click', 
-          function() {
-            chartData.datasets.forEach(function(dataset) {
-                dataset.data = dataset.data.map(function() {
-                    return randomScalingFactor();
-                });
-            });
-            window.myMixedChart.update();
-        });
-    			</script>
-
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</body>
+</html>
           </div>
         </div>
         <div class="card-footer border-t p-5">
@@ -289,11 +123,11 @@
        <div class="card mt-5 bg-white shadow-lg">
         <div class="card-header p-5 border-b">
           
-          <h2 class="text-xl text-gray-700 font-medium tracking-wide">QA Monthly Trend</h2> 
+        <center> <h2 class="text-xl text-gray-700 font-medium tracking-wide">QA Monthly Trend</h2> </center> 
         </div>
         <div class="card-content p-5">
           <div class="grid grid-cols-3 gap-4 text-center">
-          		
+          		-----------------------
           </div>
         </div>
         <div class="card-footer border-t p-5">
@@ -305,14 +139,13 @@
       </div>
       <div class="card mt-5 bg-white shadow-lg">
         <div class="card-header p-5 border-b">
-          <h2 class="text-xl text-gray-700 font-medium tracking-wide">Department</h2>
+        <center> <h2 class="text-xl text-gray-700 font-medium tracking-wide">Department</h2></center> 
         </div>
         <div class="container">
-  
-</div>
+      </div>
         <div class="card-content p-5">
           <div class="grid grid-cols-3 gap-4 text-center">
-          		
+          		-----------------------
           </div>
         </div>
         <div class="card-footer border-t p-5">
@@ -324,7 +157,7 @@
       </div>
       <div class="card mt-5 bg-white shadow-lg">
         <div class="card-header p-5 border-b">
-          <h2 class="text-xl text-gray-700 font-medium tracking-wide">Over All</h2>
+        <center>  <h2 class="text-xl text-gray-700 font-medium tracking-wide">Over All</h2></center> 
         </div>
         <div class="card-content p-5">
           <div class="grid grid-cols-3 gap-4 text-center">
